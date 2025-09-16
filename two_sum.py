@@ -20,6 +20,14 @@ def two_sum_pairs(numbers, target):
     Returns:
         A list of sets containing the two values that sum to the target.
     """
+    pairs = []
+
+    for i in range(len(numbers)-1):
+        for j in range(i+1, len(numbers)-1):
+            if(numbers[i]+numbers[j]==target):
+                pairs.append({numbers[i],numbers[j]})
+
+    return pairs
     
     # When you are ready with your code make sure to return your list! This is so the autograder can grade!
     # return ExampleListName
