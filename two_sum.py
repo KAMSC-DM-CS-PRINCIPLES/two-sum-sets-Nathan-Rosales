@@ -22,8 +22,8 @@ def two_sum_pairs(numbers, target):
     """
     pairs = []
 
-    for i in range(i, len(numbers)-1):
-        for j in range(j, len(numbers)-1):
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
             if(numbers[i]+numbers[j]==target):
                 pairs.append({numbers[i],numbers[j]})
 
@@ -34,5 +34,4 @@ def two_sum_pairs(numbers, target):
 
 # Test cases - you can run this file directly to test your function!
 if __name__ == "__main__":
-
-
+    print(two_sum_pairs([1,2,3,4], 5))
